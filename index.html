@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정미연 | 마케팅 기획자 포트폴리오</title>
+    <!-- 지적이고 깔끔한 인상을 주는 Noto Sans KR 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 
+         * 군청(Deep Navy) 계열의 이지적인 디자인 시스템
+         * 1. 메인 배경: #0F172A (깊고 지적인 다크 네이비)
+         * 2. 기본 텍스트: #F8FAFC (맑고 깨끗한 아이보리 화이트)
+         * 3. 포인트 컬러: #38BDF8 (직관적이고 선명한 스카이 블루)
+         * 4. 서브 배경: #1E293B (프로필/카드 영역용 네이비)
+         */
+        :root {
+            --bg-main: #0F172A;
+            --bg-sub: #1E293B;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --point-color: #38BDF8;
+        }
+
+        /* 기본 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 헤더 영역 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+            border-bottom: 1px solid #1E293B;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: var(--point-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav ul li a {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--point-color);
+        }
+
+        /* 메인 히어로 섹션 (카피 & 사진) */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 10%;
+            min-height: 85vh;
+        }
+
+        .hero-text {
+            flex: 1.2;
+            padding-right: 60px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            word-break: keep-all;
+        }
+
+        /* 강조 카피 색상 변경 */
+        .hero-text h1 span {
+            color: var(--point-color);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            margin-bottom: 45px;
+            word-break: keep-all;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 45px;
+            background-color: var(--point-color);
+            color: var(--bg-main);
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            background-color: #7DD3FC;
+        }
+
+        /* 사진 및 간이 프로필 영역 */
+        .hero-profile {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--bg-sub);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+        }
+
+        .profile-image-box {
+            width: 240px;
+            height: 300px;
+            background-color: #0F172A;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            border: 1px solid #475569;
+        }
+
+        .profile-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 간이 프로필 텍스트 정보 */
+        .profile-info {
+            text-align: center;
+            width: 100%;
+        }
+
+        .profile-info .name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .profile-info .title {
+            font-size: 0.95rem;
+            color: var(--point-color);
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .profile-details {
+            border-top: 1px solid #334155;
+            padding-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .profile-details span strong {
+            color: var(--text-main);
+            font-weight: 500;
+            display: inline-block;
+            width: 70px;
+        }
+
+        /* 반응형 레이아웃 (태블릿 및 모바일용) */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                padding: 60px 5%;
+                text-align: center;
+            }
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 50px;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .hero-profile {
+                width: 100%;
+                max-width: 400px;
+            }
+            .profile-details {
+                align-items: center;
+                text-align: center;
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* 모바일 메뉴 간소화 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 헤더 영역 -->
+    <header>
+        <div class="logo">M.JUNG<span>_</span></div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메인 비주얼 영역 -->
+    <section class="hero">
+        
+        <!-- 좌측: 논리적이고 직관적인 카피 영역 -->
+        <div class="hero-text">
+            <h1>충분히 당겨 기획하고,<br><span>정확한 지점에 실행합니다.</span></h1>
+            <p>
+                논리적인 기획서 작성을 시작으로 구글·네이버 광고 집행부터 Adobe 기반의 이미지·영상 콘텐츠 제작까지 직접 실행합니다. 
+                충동적인 아이디어에 머무는 것이 아닌, 충분히 조준하고 정교하게 실행하여 브랜드의 확실한 성장을 이끄는 마케팅 기획자 정미연입니다.
+            </p>
+            <a href="#projects" class="cta-btn">프로젝트 및 성과 보기</a>
+        </div>
+
+        <!-- 우측: 사진 및 신뢰감을 주는 이력 프로필 박스 -->
+        <div class="hero-profile">
+            <div class="profile-image-box">
+                <!-- 
+                  [내 사진 넣는 방법]
+                  아래 src="이미지주소"에 본인의 실제 프로필 사진 경로를 넣으세요.
+                  예: src="images/miyeon_profile.jpg"
+                -->
+                <img src="img/profileImage.png" alt="마케팅 기획자 정미연">
+            </div>
+            
+            <div class="profile-info">
+                <div class="name">정 미 연</div>
+                <div class="title">Marketing Strategist</div>
+                
+                <!-- 인사담당자가 가장 먼저 체크하는 주요 정보 요약 배치 -->
+                <div class="profile-details">
+                    <span><strong>Contact.</strong> miyeon@example.com</span>
+                    <span><strong>Channels.</strong> Google Ads / Naver Ads</span>
+                    <span><strong>Tools.</strong> Adobe CC (Image & Video)</span>
+                    <span><strong>Core.</strong> 콘텐츠 기획 및 문서 작성</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>

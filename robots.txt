@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miyeonchong-hash.github.io/MY-Lab/sitemap.xml

@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MKKDTVCR');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- JSON-LD 구조화 데이터 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -57,7 +53,6 @@
     }
     </script> 
 
-    <!-- 기본 SEO 메타태그 및 오픈그래프 -->
     <title>디지털 마케팅 엔지니어 정미연 | Miyeon Jung 포트폴리오</title>
     <meta name="description" content="데이터 기반 GA4 분석, UX/UI 디자인, AI 마케팅 자동화를 결합하여 비즈니스 성장을 이끄는 디지털 마케터 정미연(Miyeon Jung)의 포트폴리오입니다.">
     
@@ -68,7 +63,6 @@
     <meta property="og:image" content="https://miyeonchong-hash.github.io/MY-Lab/img/profileImage.png">
     <meta property="og:site_name" content="Miyeon Jung Portfolio">
 
-    <!-- 구글 폰트 사전 연결 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -204,7 +198,7 @@
             background-color: #0F172A;
             border-radius: 6px;
             overflow: hidden;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             border: 1px solid #475569;
         }
 
@@ -212,6 +206,39 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        /* 네이버 블로그 배너 스타일 정의 */
+        .blog-banner-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 240px;
+            padding: 12px 0;
+            background-color: #03C75A; /* 네이버 시그니처 초록색 */
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            transition: background-color 0.2s, transform 0.2s;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .blog-banner-btn:hover {
+            background-color: #17B75E;
+            transform: translateY(-2px);
+        }
+
+        .blog-banner-btn .blog-icon {
+            font-style: normal;
+            font-weight: 800;
+            background-color: #FFFFFF;
+            color: #03C75A;
+            padding: 0px 5px;
+            border-radius: 3px;
+            font-size: 0.75rem;
         }
 
         .profile-info {
@@ -253,7 +280,6 @@
             width: 70px;
         }
 
-        /* 이메일 링크 스타일 커스텀 */
         .profile-link {
             transition: color 0.2s, text-decoration 0.2s;
         }
@@ -295,12 +321,9 @@
     </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKKDTVCR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-    <header>
+<header>
         <div class="logo">M.JUNG<span>_</span></div>
         <nav>
             <ul>
@@ -327,12 +350,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="img/profileImage.png" alt="마케팅 기획자 정미연">
             </div>
             
+            <a href="https://blog.naver.com/my_lablog" target="_blank" rel="noopener noreferrer" class="blog-banner-btn">
+                <i class="blog-icon">N</i> 공식 블로그 방문하기
+            </a>
+            
             <div class="profile-info">
                 <div class="name">정 미 연</div>
                 <div class="title">Marketing Strategist</div>
                 
                 <div class="profile-details">
-                    <!-- 메일 연결 기능이 작동하는 이메일 링크 영역 -->
                     <span><strong>Contact.</strong> <a href="mailto:miyeonchong@naver.com" class="profile-link">miyeonchong@naver.com</a></span>
                     <span><strong>Channels.</strong> Google Ads / Naver Ads</span>
                     <span><strong>Tools.</strong> Adobe CC (Image & Video)</span>
